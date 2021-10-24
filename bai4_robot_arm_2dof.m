@@ -3,6 +3,8 @@ close all
 clc
 l1 = 0.3;
 l2 = 0.5;
+theta1 = -pi:0.001:pi;
+theta2 = -pi:0.001:pi;
 x =  l1*cos(theta1)+l2*cos(theta1 + theta2);
 y =  l1*sin(theta1)+l2*sin(theta1 + theta2);
 %Du lieu dung de huan luyen NN
@@ -14,7 +16,7 @@ figure(1)
 plot(D(1,:),D(2,:),'k*')
 grid on;
 % Khoi tao mang va huan luyen
-N=8;
+N=12;
 mynet=newff(X,D,N,{'tansig' 'purelin'});
 mynet=train(mynet,X,D);
 %Danh gia ket qua huan luyen
