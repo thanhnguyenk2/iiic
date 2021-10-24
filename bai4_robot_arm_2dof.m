@@ -3,8 +3,8 @@ close all
 clc
 l1 = 0.3;
 l2 = 0.5;
-theta1 = -pi:0.001:pi;
-theta2 = -pi:0.001:pi;
+theta1 = -pi:0.01:pi;
+theta2 = -pi:0.01:pi;
 x =  l1*cos(theta1)+l2*cos(theta1 + theta2);
 y =  l1*sin(theta1)+l2*sin(theta1 + theta2);
 %Du lieu dung de huan luyen NN
